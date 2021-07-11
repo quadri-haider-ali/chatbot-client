@@ -1,0 +1,46 @@
+.user-input {
+  display:flex;
+  /* position: absolute; */
+  /* vertical-align: bottom; */
+  /* top: 100%; */
+  /* min-height:10px; */
+  color: white;
+}
+.chatbox {
+  overflow: none;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  /* border: 1px solid #ccc; */
+}
+.chatmessages
+{
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 200px;
+}
+.chatmessages div {
+  /* border:1px solid #e2e4e3; */
+  border-radius: 5px;
+  margin:5px;
+  padding:10px;
+}
+.search{
+  height:44px;
+  border-radius:22px 22px 22px 22px;
+}
+.send{
+  height:44px;
+  width:44px;
+}
+.send i{
+  padding-left:5%;
+}
+.btn-custom{
+  border: none;
+  background: none;
+  background-color: #87CEFA;
+  color:#282c34;
+}

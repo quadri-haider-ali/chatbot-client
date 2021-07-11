@@ -1,0 +1,16 @@
+.screen {
+    min-height: 100vh;
+    /* background-color: white; */
+    /* border:50px #282c34 solid; */
+    display:flex;
+    flex-direction: column;
+    background: rgba(0,0,0,0.5);
+}
+
+.msgs {
+    position:relative;
+    bottom:0px;
+}
+.stick-bottom{
+    margin-top:auto;
+}

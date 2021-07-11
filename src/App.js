@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React,{useState} from 'react'
+import Screen from './screen/Screen';
 import './App.css';
 
+const msgs = [
+    {avatar:"robot",message:"This is a Message by Robot"},
+];
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [messages,setMessages]=useState(msgs);
+    console.log(messages);
+    const addMessage=newMessage=>{
+        setMessages(prevMessages=>[...prevMessages,newMessage])
+    }
+    return (
+        <div className="bg">
+            <Screen messages={messages} addMessage={addMessage}/>
+        </div>
+    );
 }
 
 export default App;
