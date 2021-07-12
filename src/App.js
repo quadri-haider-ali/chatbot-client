@@ -3,18 +3,20 @@ import Screen from './screen/Screen';
 import './App.css';
 
 const msgs = [
-    {avatar:"robot",message:"This is a Message by Robot"},
+    {id:1,avatar:"robot",message:"Hi There, May I know your Name."},
 ];
 
 function App() {
+    const [id,setId]=useState(2);
     const [messages,setMessages]=useState(msgs);
-    console.log(messages);
+    // console.log(messages);
     const addMessage=newMessage=>{
-        setMessages(prevMessages=>[...prevMessages,newMessage])
+        setMessages(prevMessages=>[...prevMessages,newMessage]);
+        setId(id+1);
     }
     return (
         <div className="bg">
-            <Screen messages={messages} addMessage={addMessage}/>
+            <Screen messages={messages} id={id} addMessage={addMessage}/>
         </div>
     );
 }

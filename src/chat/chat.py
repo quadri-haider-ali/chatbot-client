@@ -10,11 +10,10 @@ Original file is located at
 
 Disease prediction using symptoms.
 """
+
 # Importing necessary libraries
-#!pip install pyttsx3
 import matplotlib.pyplot as plt
 import pandas as pd
-import pyttsx3
 from sklearn import preprocessing
 from sklearn.tree import DecisionTreeClassifier,_tree
 import numpy as np
@@ -132,11 +131,8 @@ def check_pattern(dis_list,inp):
     patt = "^" + inp + "$"
     regexp = re.compile(inp)
     for item in dis_list:
-
-        # print(f"comparing {inp} to {item}")
         if regexp.search(item):
             pred_list.append(item)
-            # return 1,item
     if(len(pred_list)>0):
         return 1,pred_list
     else:
@@ -255,6 +251,6 @@ def tree_to_code(tree, feature_names):
 getSeverityDict()
 getDescription()
 getprecautionDict()
-
+# print('hi')
 getInfo()
 tree_to_code(clf,cols)
